@@ -2,15 +2,29 @@
 <html>
 <head>
     <title>Data Visualizer</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { margin: 0; }
-        canvas { width: 100%; height: 100% }
+        #renderCanvas { width: 100%; height: 70vh; }
+        .center { margin: auto; width: 50%; padding: 10px; }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Data Visualizer</a>
+    </nav>
+
+    <div class="center">
+        <h1>Welcome to Data Visualizer</h1>
+        <p>This is an application to visualize 3D data. The data is loaded from a server and displayed in a 3D scene using Three.js.</p>
+    </div>
+
+    <div id="renderCanvas"></div>
+
     <script src="{{ url_for('static', filename='js/client.js') }}"></script>
 </body>
 </html>
+
 
