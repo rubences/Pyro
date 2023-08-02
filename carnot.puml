@@ -1,0 +1,28 @@
+@startuml
+scale 200 width
+scale 150 height
+title Carnot Cycle in VANETs
+
+scale 100 pixels/2units
+Origin -> (0,0)
+x-axis -> (20,0)
+y-axis -> (0,15)
+(0,0) .. (8,12) .. (20,7) .. (12,0) .. (0,0)
+
+(0,0) -[hidden]down-> (0,-1) : "0"
+(8,12) -[hidden]left-> (7,12) : "B\nAddition of Nodes"
+(20,7) -[hidden]right-> (21,7) : "C\nNetwork Variation"
+(12,0) -[hidden]down-> (12,-1) : "D\nConsensus Building"
+(0,0) -[hidden]left-> (-1,0) : "A\nInformation Exchange"
+
+"x-axis" at (20,-2) : "Information Entropy"
+"y-axis" at (-2,15) : Quality of Information\n(QoI)
+
+legend bottom
+  The four corners represent different states of the VANETs network
+  in terms of entropy and 'temperature' (information energy).
+  The sides of the square represent the processes that move from one state to another,
+  interpreted as different processes in VANETs: adding nodes, network variation,
+  information exchange, and consensus building.
+endlegend
+@enduml
